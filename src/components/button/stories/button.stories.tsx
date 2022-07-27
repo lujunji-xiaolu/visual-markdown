@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Grid from "@mui/material/Grid";
-import { ThemeProvider } from "@/features/theme";
+import { Layout } from "@/features/storybook";
 import Button from "../button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -14,26 +13,15 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => (
-  <>
-    <Grid container spacing={2}>
-      <Grid item xs={6}>
-        <ThemeProvider mode="light">
-          <Button {...args} />
-        </ThemeProvider>
-      </Grid>
-      <Grid item xs={6}>
-        <ThemeProvider mode="dark">
-          <Button {...args} />
-        </ThemeProvider>
-      </Grid>
-    </Grid>
-  </>
+  <Layout>
+    <Button {...args} />
+  </Layout>
 );
 
 export const Contained = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Contained.args = {
   variant: "accent",
-  disabled: true,
+  disabled: false,
   children: "Text",
 };
