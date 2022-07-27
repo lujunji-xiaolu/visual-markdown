@@ -1,35 +1,34 @@
+import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Layout } from "@/features/storybook";
-import Button from "@/components/button";
+import ToggleButton from "@/components/toggle-button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "WinUI/Button",
-  component: Button,
+  title: "WinUI/ToggleButton",
+  component: ToggleButton,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof ToggleButton>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => (
-  <Layout>
-    <Button {...args} />
-  </Layout>
-);
-
-export const Contained = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Contained.args = {
-  variant: "accent",
-  disabled: false,
-  children: "Text",
+const Template: ComponentStory<typeof ToggleButton> = (args) => {
+  const [selected, setSelected] = React.useState(true);
+  return (
+    <Layout>
+      <ToggleButton
+        {...args}
+        selected={selected}
+        onClick={() => setSelected(!selected)}
+      />
+    </Layout>
+  );
 };
 
-export const Standard = Template.bind({});
+export const Selected = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Standard.args = {
-  variant: "standard",
+Selected.args = {
   disabled: false,
   children: "Text",
 };

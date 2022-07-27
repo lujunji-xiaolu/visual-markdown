@@ -55,6 +55,7 @@ const ButtonRoot = styled(ButtonBase, {
   ...(ownerState.variant === "accent" && {
     color: theme.palette.textOnAccent.primary,
     backgroundColor: theme.palette.fill.accent.default,
+    border: "1px solid transparent",
   }),
   ...(ownerState.variant === "standard" && {
     color: theme.palette.text.primary,
@@ -63,7 +64,7 @@ const ButtonRoot = styled(ButtonBase, {
   }),
 }));
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "accent" | "standard";
   disabled?: boolean;
   children?: React.ReactNode;
@@ -71,7 +72,7 @@ interface ButtonProps {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
-    const { variant = "accent", disabled = false, children } = props;
+    const { variant = "accent", disabled = false, children, ...other } = props;
 
     const ownerState: OwnerState = { variant };
 
@@ -81,6 +82,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         disableRipple
         ref={ref}
+        {...other}
       >
         {children}
       </ButtonRoot>
