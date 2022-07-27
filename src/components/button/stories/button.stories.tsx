@@ -25,3 +25,11 @@ Contained.args = {
   disabled: false,
   children: "Text",
 };
+
+export const Standard = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Standard.args = {
+  variant: "standard",
+  disabled: false,
+  children: "Text",
+};

@@ -10,6 +10,17 @@ const darkTheme = createTheme({
         tertiary: "rgba(96, 205, 255, 0.8)",
         disabled: "rgba(255, 255, 255, 0.1581)",
       },
+      control: {
+        default: "rgba(255, 255, 255, 0.0605)",
+        secondary: "rgba(255, 255, 255, 0.0837)",
+        tertiary: "rgba(255, 255, 255, 0.0326)",
+        disabled: "rgba(255, 255, 255, 0.0419)",
+      },
+    },
+    text: {
+      primary: "#FFFFFF",
+      secondary: "rgba(255, 255, 255, 0.786)",
+      disabled: "rgba(255, 255, 255, 0.3628)",
     },
     textOnAccent: {
       primary: "#000000",
@@ -21,6 +32,17 @@ const darkTheme = createTheme({
     body2: {
       fontFamily:
         "Segoe UI Variable Static Text, Roboto, Helvetica, Arial, sans-serif",
+    },
+  },
+  elevation: {
+    control: {
+      border: "1px solid rgba(255, 255, 255, 0.093)",
+      borderBottomColor: "rgba(255, 255, 255, 0.0698)",
+    },
+  },
+  stroke: {
+    control: {
+      default: "rgba(255, 255, 255, 0.0698)",
     },
   },
 });

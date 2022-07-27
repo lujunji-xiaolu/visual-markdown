@@ -26,11 +26,19 @@ const ButtonRoot = styled(ButtonBase, {
     ...(ownerState.variant === "accent" && {
       backgroundColor: theme.palette.fill.accent.secondary,
     }),
+    ...(ownerState.variant === "standard" && {
+      backgroundColor: theme.palette.fill.control.secondary,
+    }),
   },
   "&:active": {
     ...(ownerState.variant === "accent" && {
       color: theme.palette.textOnAccent.secondary,
       backgroundColor: theme.palette.fill.accent.tertiary,
+    }),
+    ...(ownerState.variant === "standard" && {
+      color: theme.palette.text.secondary,
+      backgroundColor: theme.palette.fill.control.tertiary,
+      border: `1px solid ${theme.stroke.control.default}`,
     }),
   },
   [`&.${buttonClasses.disabled}`]: {
@@ -38,10 +46,20 @@ const ButtonRoot = styled(ButtonBase, {
       color: theme.palette.textOnAccent.disabled,
       backgroundColor: theme.palette.fill.accent.disabled,
     }),
+    ...(ownerState.variant === "standard" && {
+      color: theme.palette.text.disabled,
+      backgroundColor: theme.palette.fill.control.disabled,
+      border: `1px solid ${theme.stroke.control.default}`,
+    }),
   },
   ...(ownerState.variant === "accent" && {
     color: theme.palette.textOnAccent.primary,
     backgroundColor: theme.palette.fill.accent.default,
+  }),
+  ...(ownerState.variant === "standard" && {
+    color: theme.palette.text.primary,
+    backgroundColor: theme.palette.fill.control.default,
+    ...theme.elevation.control,
   }),
 }));
 

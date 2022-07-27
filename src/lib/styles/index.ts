@@ -1,11 +1,29 @@
 export * from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-  interface Theme {}
+  interface Theme {
+    elevation: {
+      control: {
+        border: string;
+        borderBottomColor: string;
+      };
+    };
+    stroke: {
+      control: {
+        default: string;
+      };
+    };
+  }
 
   interface Palette {
     fill: {
       accent: {
+        default: string;
+        secondary: string;
+        tertiary: string;
+        disabled: string;
+      };
+      control: {
         default: string;
         secondary: string;
         tertiary: string;
@@ -26,6 +44,12 @@ declare module "@mui/material/styles" {
         tertiary: string;
         disabled: string;
       };
+      control: {
+        default: string;
+        secondary: string;
+        tertiary: string;
+        disabled: string;
+      };
     };
     textOnAccent: {
       primary: string;
@@ -36,5 +60,17 @@ declare module "@mui/material/styles" {
 
   interface PaletteColor {}
   interface SimplePaletteColorOptions {}
-  interface ThemeOptions {}
+  interface ThemeOptions {
+    elevation: {
+      control: {
+        border: string;
+        borderBottomColor: string;
+      };
+    };
+    stroke: {
+      control: {
+        default: string;
+      };
+    };
+  }
 }
