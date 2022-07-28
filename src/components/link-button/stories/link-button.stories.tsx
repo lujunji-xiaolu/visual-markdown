@@ -1,27 +1,21 @@
-import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Layout } from "@/features/storybook";
-import ToggleButton from "@/components/toggle-button";
+import LinkButton from "@/components/link-button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "WinUI/ToggleButton",
-  component: ToggleButton,
+  title: "WinUI/LinkButton",
+  component: LinkButton,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof ToggleButton>;
+} as ComponentMeta<typeof LinkButton>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ToggleButton> = (args) => {
-  const [selected, setSelected] = React.useState(true);
+const Template: ComponentStory<typeof LinkButton> = (args) => {
   return (
     <Layout>
-      <ToggleButton
-        {...args}
-        selected={selected}
-        onClick={() => setSelected(!selected)}
-      />
+      <LinkButton {...args} />
     </Layout>
   );
 };

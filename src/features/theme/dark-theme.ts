@@ -16,6 +16,10 @@ const darkTheme = createTheme({
         tertiary: "rgba(255, 255, 255, 0.0326)",
         disabled: "rgba(255, 255, 255, 0.0419)",
       },
+      subtle: {
+        secondary: "rgba(255, 255, 255, 0.0605)",
+        tertiary: "rgba(255, 255, 255, 0.0419)",
+      },
     },
     text: {
       primary: "#FFFFFF",
@@ -26,6 +30,12 @@ const darkTheme = createTheme({
       primary: "#000000",
       secondary: "rgba(0, 0, 0, 0.5)",
       disabled: "rgba(255, 255, 255, 0.5302)",
+    },
+    accentText: {
+      primary: "#99EBFF",
+      secondary: "#99EBFF",
+      tertiary: "#60CDFF",
+      disabled: "rgba(255, 255, 255, 0.3628)",
     },
   },
   typography: {

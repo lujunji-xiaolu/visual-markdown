@@ -17,7 +17,7 @@ const ButtonRoot = styled(ButtonBase, {
   borderRadius: theme.shape.borderRadius,
   ...theme.typography.body2,
   transition: theme.transitions.create(
-    ["background-color", "box-shadow", "border-color", "color"],
+    ["background-color", "border-color", "color"],
     {
       duration: theme.transitions.duration.short,
     }

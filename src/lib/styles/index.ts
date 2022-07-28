@@ -29,10 +29,20 @@ declare module "@mui/material/styles" {
         tertiary: string;
         disabled: string;
       };
+      subtle: {
+        secondary: string;
+        tertiary: string;
+      };
     };
     textOnAccent: {
       primary: string;
       secondary: string;
+      disabled: string;
+    };
+    accentText: {
+      primary: string;
+      secondary: string;
+      tertiary: string;
       disabled: string;
     };
   }
@@ -50,10 +60,20 @@ declare module "@mui/material/styles" {
         tertiary: string;
         disabled: string;
       };
+      subtle: {
+        secondary: string;
+        tertiary: string;
+      };
     };
     textOnAccent: {
       primary: string;
       secondary: string;
+      disabled: string;
+    };
+    accentText: {
+      primary: string;
+      secondary: string;
+      tertiary: string;
       disabled: string;
     };
   }
