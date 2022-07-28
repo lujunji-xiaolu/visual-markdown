@@ -22,5 +22,4 @@ export const ChevronDownMed = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ChevronDownMed.args = {
   name: "ChevronDownMed",
-  size: 12,
 };

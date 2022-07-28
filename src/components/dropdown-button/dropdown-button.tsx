@@ -1,7 +1,7 @@
 import * as React from "react";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 import Button, { ButtonProps } from "@/components/button";
+import SegoeFluentIcon from "@/components/segoe-fluent-icon";
 import { styled } from "@mui/material/styles";
 
 const DropdownButtonRoot = styled(Button, {
@@ -21,10 +21,8 @@ const DropdownButtonRoot = styled(Button, {
   },
 }));
 
-const EndIcon = styled("span")(({ theme }) => ({
-  display: "flex",
+const EndIcon = styled(SegoeFluentIcon)(({ theme }) => ({
   marginLeft: 8,
-  fontSize: 16,
   color: theme.palette.text.secondary,
 }));
 
@@ -40,9 +38,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
         variant="standard"
         disabled={disabled}
         endIcon={
-          <EndIcon className="WinUIDropdownEndIcon">
-            <ExpandMoreIcon fontSize="inherit" color="inherit" />
-          </EndIcon>
+          <EndIcon name="ChevronDownMed" className="WinUIDropdownEndIcon" />
         }
         ref={ref}
         {...other}
