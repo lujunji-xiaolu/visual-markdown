@@ -1,9 +1,6 @@
 import * as React from "react";
 import ButtonBase from "@mui/material/ButtonBase";
 import { styled } from "@mui/material/styles";
-import generateUtilityClasses from "@mui/base/generateUtilityClasses";
-
-const buttonClasses = generateUtilityClasses("WinUIButton", ["disabled"]);
 
 interface OwnerState {
   variant: "accent" | "standard";
@@ -41,7 +38,7 @@ const ButtonRoot = styled(ButtonBase, {
       border: `1px solid ${theme.stroke.control.default}`,
     }),
   },
-  [`&.${buttonClasses.disabled}`]: {
+  "&.Mui-disabled": {
     ...(ownerState.variant === "accent" && {
       color: theme.palette.textOnAccent.disabled,
       backgroundColor: theme.palette.fill.accent.disabled,

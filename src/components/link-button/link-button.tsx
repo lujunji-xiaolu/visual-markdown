@@ -1,11 +1,6 @@
 import * as React from "react";
 import ButtonBase from "@mui/material/ButtonBase";
 import { styled } from "@mui/material/styles";
-import generateUtilityClasses from "@mui/base/generateUtilityClasses";
-
-const linkButtonClasses = generateUtilityClasses("WinUILinkButton", [
-  "disabled",
-]);
 
 const LinkButtonRoot = styled(ButtonBase, {
   name: "WinUILinkButton",
@@ -26,7 +21,7 @@ const LinkButtonRoot = styled(ButtonBase, {
     color: theme.palette.accentText.tertiary,
     backgroundColor: theme.palette.fill.subtle.tertiary,
   },
-  [`&.${linkButtonClasses.disabled}`]: {
+  "&.Mui-disabled": {
     color: theme.palette.accentText.disabled,
   },
 }));
