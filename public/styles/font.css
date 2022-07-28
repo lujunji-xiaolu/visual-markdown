@@ -2,3 +2,8 @@
   font-family: "Segoe UI Variable Static Text";
   src: url("/fonts/Segoe-UI-Variable-Static-Text.ttf");
 }
+
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: url("/fonts/Segoe Fluent Icons.ttf");
+}
