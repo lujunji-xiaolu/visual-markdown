@@ -24,6 +24,7 @@ const darkTheme = createTheme({
     text: {
       primary: "#FFFFFF",
       secondary: "rgba(255, 255, 255, 0.786)",
+      tertiary: "rgba(255, 255, 255, 0.5442)",
       disabled: "rgba(255, 255, 255, 0.3628)",
     },
     textOnAccent: {

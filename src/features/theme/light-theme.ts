@@ -24,6 +24,7 @@ const lightTheme = createTheme({
     text: {
       primary: "rgba(0, 0, 0, 0.8956)",
       secondary: "rgba(0, 0, 0, 0.6063)",
+      tertiary: "rgba(0, 0, 0, 0.4458)",
       disabled: "rgba(0, 0, 0, 0.3614)",
     },
     textOnAccent: {

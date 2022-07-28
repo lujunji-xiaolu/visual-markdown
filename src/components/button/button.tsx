@@ -1,4 +1,5 @@
 import * as React from "react";
+import { SxProps, Theme } from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import { styled } from "@mui/material/styles";
 
@@ -61,15 +62,24 @@ const ButtonRoot = styled(ButtonBase, {
   }),
 }));
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "accent" | "standard";
   disabled?: boolean;
+  sx?: SxProps<Theme>;
+  endIcon?: React.ReactNode;
   children?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
-    const { variant = "accent", disabled = false, children, ...other } = props;
+    const {
+      variant = "accent",
+      disabled = false,
+      endIcon,
+      children,
+      ...other
+    } = props;
 
     const ownerState: OwnerState = { variant };
 
@@ -82,6 +92,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...other}
       >
         {children}
+        {endIcon}
       </ButtonRoot>
     );
   }

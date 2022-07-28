@@ -93,4 +93,8 @@ declare module "@mui/material/styles" {
       };
     };
   }
+
+  interface TypeText {
+    tertiary: string;
+  }
 }
