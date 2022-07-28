@@ -50,6 +50,7 @@ const darkTheme = createTheme({
       border: "1px solid rgba(255, 255, 255, 0.093)",
       borderBottomColor: "rgba(255, 255, 255, 0.0698)",
     },
+    flyout: "0px 8px 16px rgba(0, 0, 0, 0.26)",
   },
   stroke: {
     control: {

@@ -7,6 +7,7 @@ declare module "@mui/material/styles" {
         border: string;
         borderBottomColor: string;
       };
+      flyout: string;
     };
     stroke: {
       control: {
@@ -86,6 +87,7 @@ declare module "@mui/material/styles" {
         border: string;
         borderBottomColor: string;
       };
+      flyout: string;
     };
     stroke: {
       control: {

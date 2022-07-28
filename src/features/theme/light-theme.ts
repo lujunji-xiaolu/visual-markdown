@@ -50,6 +50,7 @@ const lightTheme = createTheme({
       border: "1px solid rgba(0, 0, 0, 0.0578)",
       borderBottomColor: "rgba(0, 0, 0, 0.1622)",
     },
+    flyout: "0px 8px 16px rgba(0, 0, 0, 0.14)",
   },
   stroke: {
     control: {
