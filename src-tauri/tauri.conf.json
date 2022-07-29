@@ -55,11 +55,14 @@
     },
     "windows": [
       {
+        "visible": false,
         "fullscreen": false,
         "height": 600,
+        "width": 800,
+        "transparent": true,
+        "center": true,
         "resizable": true,
-        "title": "visual-markdown",
-        "width": 800
+        "title": "visual-markdown"
       }
     ]
   }
