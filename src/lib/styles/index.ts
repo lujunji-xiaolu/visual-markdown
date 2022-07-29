@@ -13,6 +13,9 @@ declare module "@mui/material/styles" {
       control: {
         default: string;
       };
+      controlStrong: {
+        default: string;
+      };
     };
   }
 
@@ -29,6 +32,9 @@ declare module "@mui/material/styles" {
         secondary: string;
         tertiary: string;
         disabled: string;
+      };
+      controlAlt: {
+        secondary: string;
       };
       subtle: {
         secondary: string;
@@ -61,6 +67,9 @@ declare module "@mui/material/styles" {
         tertiary: string;
         disabled: string;
       };
+      controlAlt: {
+        secondary: string;
+      };
       subtle: {
         secondary: string;
         tertiary: string;
@@ -91,6 +100,9 @@ declare module "@mui/material/styles" {
     };
     stroke: {
       control: {
+        default: string;
+      };
+      controlStrong: {
         default: string;
       };
     };

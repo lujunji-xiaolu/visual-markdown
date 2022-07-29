@@ -16,6 +16,9 @@ const lightTheme = createTheme({
         tertiary: "rgba(249, 249, 249, 0.3)",
         disabled: "rgba(255, 255, 255, 0.786)",
       },
+      controlAlt: {
+        secondary: "rgba(0, 0, 0, 0.0241)",
+      },
       subtle: {
         secondary: "rgba(0, 0, 0, 0.0373)",
         tertiary: "rgba(0, 0, 0, 0.0241)",
@@ -41,8 +44,7 @@ const lightTheme = createTheme({
   },
   typography: {
     body2: {
-      fontFamily:
-        "Segoe UI Variable Static Text, Roboto, Helvetica, Arial, sans-serif",
+      fontFamily: "Segoe UI Variable Static Text, Roboto, Helvetica, Arial, sans-serif",
     },
   },
   elevation: {
@@ -55,6 +57,9 @@ const lightTheme = createTheme({
   stroke: {
     control: {
       default: "rgba(0, 0, 0, 0.0578)",
+    },
+    controlStrong: {
+      default: "rgba(0, 0, 0, 0.4458)",
     },
   },
 });
