@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Segoe UI Variable Static Small";
+  src: url("/fonts/Segoe-UI-Variable-Static-Small.ttf");
+}
+
+@font-face {
   font-family: "Segoe Fluent Icons";
   src: url("/fonts/Segoe Fluent Icons.ttf");
 }

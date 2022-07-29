@@ -46,6 +46,9 @@ const lightTheme = createTheme({
     body2: {
       fontFamily: "Segoe UI Variable Static Text, Roboto, Helvetica, Arial, sans-serif",
     },
+    caption: {
+      fontFamily: "Segoe UI Variable Static Small, Roboto, Helvetica, Arial, sans-serif",
+    },
   },
   elevation: {
     control: {

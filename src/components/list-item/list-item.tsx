@@ -12,7 +12,7 @@ const ListItemRoot = styled("li", {
   position: "relative",
   height: 34,
   width: 268,
-  padding: "7px 10px",
+  padding: "8px 10px",
   margin: "3px 5px",
   borderRadius: theme.shape.borderRadius,
   ...theme.typography.body2,
@@ -81,21 +81,19 @@ interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   children?: React.ReactNode;
 }
 
-const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
-  (props, ref) => {
-    const { disabled = false, selected = false, children, ...other } = props;
+const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>((props, ref) => {
+  const { disabled = false, selected = false, children, ...other } = props;
 
-    return (
-      <ListItemRoot
-        className={clsx({ "Mui-disabled": disabled, "Mui-selected": selected })}
-        ref={ref}
-        {...other}
-      >
-        <div className="WinUIListItem-selector"></div>
-        {children}
-      </ListItemRoot>
-    );
-  }
-);
+  return (
+    <ListItemRoot
+      className={clsx({ "Mui-disabled": disabled, "Mui-selected": selected })}
+      ref={ref}
+      {...other}
+    >
+      <div className="WinUIListItem-selector"></div>
+      {children}
+    </ListItemRoot>
+  );
+});
 
 export default ListItem;
