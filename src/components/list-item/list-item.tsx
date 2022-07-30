@@ -82,11 +82,11 @@ interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
 }
 
 const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>((props, ref) => {
-  const { disabled = false, selected = false, children, ...other } = props;
+  const { disabled = false, selected = false, className, children, ...other } = props;
 
   return (
     <ListItemRoot
-      className={clsx({ "Mui-disabled": disabled, "Mui-selected": selected })}
+      className={clsx(className, { "Mui-disabled": disabled, "Mui-selected": selected })}
       ref={ref}
       {...other}
     >

@@ -65,6 +65,15 @@ const lightTheme = createTheme({
       default: "rgba(0, 0, 0, 0.4458)",
     },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: "transparent",
+        },
+      },
+    },
+  },
 });
 
 export default lightTheme;

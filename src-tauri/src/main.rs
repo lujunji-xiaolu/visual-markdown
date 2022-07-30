@@ -2,8 +2,17 @@
     all(not(debug_assertions), target_os = "windows"),
     windows_subsystem = "windows"
 )]
+use tauri::api::dialog::FileDialogBuilder;
 use tauri::Manager;
 use window_vibrancy::apply_mica;
+
+#[tauri::command]
+async fn open_folder() {
+    FileDialogBuilder::new().pick_folder(|folder_path| {
+        // do something with the optional folder path here
+        // the folder path is `None` if the user closed the dialog
+    })
+}
 
 fn main() {
     tauri::Builder::default()
@@ -29,6 +38,8 @@ fn main() {
 
             Ok(())
         })
+        // This is where you pass in your commands
+        .invoke_handler(tauri::generate_handler![open_folder])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -3,6 +3,8 @@ import { styled, SxProps, Theme } from "@mui/material/styles";
 
 const icons = {
   ChevronDownMed: '"\\e972"',
+  Search: '"\\e721"',
+  More: '"\\e712"',
 };
 
 const SegoeFluentIconRoot = styled("span", {
@@ -25,16 +27,12 @@ interface SegoeFluentIconProps {
   sx?: SxProps<Theme>;
 }
 
-const SegoeFluentIcon = React.forwardRef<HTMLSpanElement, SegoeFluentIconProps>(
-  (props, ref) => {
-    const { name, ...other } = props;
+const SegoeFluentIcon = React.forwardRef<HTMLSpanElement, SegoeFluentIconProps>((props, ref) => {
+  const { name, ...other } = props;
 
-    const content = icons[name] ?? "";
+  const content = icons[name] ?? "";
 
-    return (
-      <SegoeFluentIconRoot ownerState={{ content }} ref={ref} {...other} />
-    );
-  }
-);
+  return <SegoeFluentIconRoot ownerState={{ content }} ref={ref} {...other} />;
+});
 
 export default SegoeFluentIcon;
