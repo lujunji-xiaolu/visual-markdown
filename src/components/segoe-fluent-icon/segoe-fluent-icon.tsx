@@ -5,6 +5,7 @@ const icons = {
   ChevronDownMed: '"\\e972"',
   Search: '"\\e721"',
   More: '"\\e712"',
+  Clear: '"\\e894"',
 };
 
 const SegoeFluentIconRoot = styled("span", {

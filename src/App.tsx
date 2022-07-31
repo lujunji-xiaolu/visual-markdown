@@ -55,7 +55,7 @@ const SideBarContent = styled("div")({
 });
 
 const DragBar = styled("div")({
-  border: "1px solid transparent",
+  width: 4,
   cursor: "e-resize",
 });
 
@@ -65,6 +65,7 @@ const StatusBar = styled("div")({
 
 function App() {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [activeTabIndex, setActiveTabIndex] = React.useState(0);
 
   const targetRef = React.useRef<HTMLDivElement>(null);
   const dragBarRef = React.useRef<HTMLDivElement>(null);
@@ -102,7 +103,7 @@ function App() {
   return (
     <FlexBox sx={{ flexDirection: "column", height: "100vh" }}>
       <MenuBar />
-      <FlexBox sx={{ flex: 1 }}>
+      <FlexBox sx={{ flex: 1, paddingRight: "4px" }}>
         <ActivityBar>
           <StyledListItem selected={selectedIndex === 0} onClick={() => setSelectedIndex(0)}>
             <FilesIcon fontSize="small" />
@@ -125,12 +126,19 @@ function App() {
           </SideBarContent>
         </SideBar>
         <DragBar ref={dragBarRef} />
-        <FlexBox sx={{ flex: 1, overflowX: "auto" }}>
+        <FlexBox sx={{ flex: 1, flexDirection: "column", overflowX: "auto" }}>
           <Tabs>
-            <Tab>Text</Tab>
-            <Tab>Text</Tab>
-            <Tab>Text</Tab>
+            <Tab selected={activeTabIndex === 0} onClick={() => setActiveTabIndex(0)}>
+              Text
+            </Tab>
+            <Tab selected={activeTabIndex === 1} onClick={() => setActiveTabIndex(1)}>
+              Text
+            </Tab>
+            <Tab selected={activeTabIndex === 2} onClick={() => setActiveTabIndex(2)}>
+              Text
+            </Tab>
           </Tabs>
+          <Card sx={{ flex: 1 }}></Card>
         </FlexBox>
       </FlexBox>
       <StatusBar></StatusBar>

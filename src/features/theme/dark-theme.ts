@@ -59,6 +59,15 @@ const darkTheme = createTheme({
       default: "rgba(255, 255, 255, 0.0698)",
     },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: "transparent",
+        },
+      },
+    },
+  },
 });
 
 export default darkTheme;
